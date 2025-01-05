@@ -1,0 +1,137 @@
+По фискальному номеру пРРО и датам, собираются все зарегистрированные Z-Отчёты за указанный период, и представляются в виде "Суммируещего Z-отчёта".
+
+>>>Soldat
+{
+"commandName": "getReportForPeriod",
+"cashierId":"c817246fefe734d78092903ad29008ad9f927dbd44d77c6ce48466a8598c1559",
+"registrarId":"4000777270",
+"from": "00:01:00 01.01.2024",
+"to": "23:59:00 31.01.2024"
+}
+
+Jan
+curl -X POST "http://127.0.0.1:55551/command/getReportForPeriod" -H  "accept: application/json;charset=utf-8" -H  "Content-Type: application/json;charset=utf-8" -d "{\"commandName\":\"getReportForPeriod\",\"cashierId\":\"c817246fefe734d78092903ad29008ad9f927dbd44d77c6ce48466a8598c1559\",\"registrarId\":\"4000777270\",\"from\":\"00:01:00 01.01.2024\",\"to\":\"23:59:00 31.01.2024\"}"
+Feb
+curl -X POST "http://127.0.0.1:55551/command/getReportForPeriod" -H  "accept: application/json;charset=utf-8" -H  "Content-Type: application/json;charset=utf-8" -d "{\"commandName\":\"getReportForPeriod\",\"cashierId\":\"c817246fefe734d78092903ad29008ad9f927dbd44d77c6ce48466a8598c1559\",\"registrarId\":\"4000777270\",\"from\":\"00:01:00 01.02.2024\",\"to\":\"23:59:00 29.02.2024\"}"
+
+{
+  "success": true,
+  "data": {
+    "startOfPeriod": "00:01:00 01.01.2024",
+    "endOfPeriod": "23:59:00 31.01.2024",
+    "shiftsCount": 30,
+    "companyName": "ФОП \"КАЧИНСЬКА ОЛЕНА ДМИТРІВНА\"",
+    "pointName": "Буфет",
+    "pointAddress": "УКРАЇНА, ХАРКIВСЬКА ОБЛ., М. ХАРКІВ ШЕВЧЕНКIВСЬКИЙ Р-Н, вулиця 23 Серпня 30",
+    "tin": "2596520826",
+    "cashierName": "Качинська Олена Дмитрівна",
+    "serviceInputTotal": "0.00",
+    "serviceOutputTotal": "0.00",
+    "totalsBySale": {
+      "ordersCount": 932,
+      "totalPawnOrdersCountIssued": 0,
+      "totalPawnOrdersCountReceived": 0,
+      "totalSum": "165767.00",
+      "totalPawnSumIssued": "0.00",
+      "totalPawnSumReceived": "0.00",
+      "totalDiscountSum": "0.00",
+      "totalsByPaymentType": [
+        {
+          "code": "1",
+          "name": "Банківська картка",
+          "totalSum": "165767.00"
+        }
+      ],
+      "totalsByTaxRate": [
+        {
+          "type": 0,
+          "letter": "Д",
+          "name": "ПДВ",
+          "percent": "0.00",
+          "sign": false,
+          "turnover": "165767.00",
+          "sourceSum": "165767.00",
+          "sum": "0.00"
+        }
+      ]
+    },
+    "totalsByReturn": {
+      "ordersCount": 0,
+      "totalPawnOrdersCountIssued": 0,
+      "totalPawnOrdersCountReceived": 0,
+      "totalSum": "0.00",
+      "totalPawnSumIssued": "0.00",
+      "totalPawnSumReceived": "0.00",
+      "totalDiscountSum": "0.00",
+      "totalsByPaymentType": [],
+      "totalsByTaxRate": []
+    },
+    "cashTotals": {
+      "ordersCount": 0,
+      "totalSum": "0.00",
+      "totalCommissionSum": "0.00"
+    },
+    "dateTime": "17:05:01 04.01.2025"
+  }
+}
+
+{
+  "success": true,
+  "data": {
+    "startOfPeriod": "00:01:00 01.02.2024",
+    "endOfPeriod": "23:59:00 29.02.2024",
+    "shiftsCount": 29,
+    "companyName": "ФОП \"КАЧИНСЬКА ОЛЕНА ДМИТРІВНА\"",
+    "pointName": "Буфет",
+    "pointAddress": "УКРАЇНА, ХАРКIВСЬКА ОБЛ., М. ХАРКІВ ШЕВЧЕНКIВСЬКИЙ Р-Н, вулиця 23 Серпня 30",
+    "tin": "2596520826",
+    "cashierName": "Качинська Олена Дмитрівна",
+    "serviceInputTotal": "0.00",
+    "serviceOutputTotal": "0.00",
+    "totalsBySale": {
+      "ordersCount": 1274,
+      "totalPawnOrdersCountIssued": 0,
+      "totalPawnOrdersCountReceived": 0,
+      "totalSum": "210716.00",
+      "totalPawnSumIssued": "0.00",
+      "totalPawnSumReceived": "0.00",
+      "totalDiscountSum": "0.00",
+      "totalsByPaymentType": [
+        {
+          "code": "1",
+          "name": "Банківська картка",
+          "totalSum": "210716.00"
+        }
+      ],
+      "totalsByTaxRate": [
+        {
+          "type": 0,
+          "letter": "Д",
+          "name": "ПДВ",
+          "percent": "0.00",
+          "sign": false,
+          "turnover": "210716.00",
+          "sourceSum": "210716.00",
+          "sum": "0.00"
+        }
+      ]
+    },
+    "totalsByReturn": {
+      "ordersCount": 0,
+      "totalPawnOrdersCountIssued": 0,
+      "totalPawnOrdersCountReceived": 0,
+      "totalSum": "0.00",
+      "totalPawnSumIssued": "0.00",
+      "totalPawnSumReceived": "0.00",
+      "totalDiscountSum": "0.00",
+      "totalsByPaymentType": [],
+      "totalsByTaxRate": []
+    },
+    "cashTotals": {
+      "ordersCount": 0,
+      "totalSum": "0.00",
+      "totalCommissionSum": "0.00"
+    },
+    "dateTime": "17:11:54 04.01.2025"
+  }
+}
